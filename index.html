@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday Prem! 🎂</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Birthday Input Form -->
+        <div id="birthdayForm" class="card form-card">
+            <div class="card-header">
+                <h1>🎂 Birthday Celebration 🎉</h1>
+                <p>Let's celebrate your special day!</p>
+            </div>
+            <div class="card-body">
+                <form id="dateForm">
+                    <div class="input-group">
+                        <label for="birthDate">
+                            <i class="fas fa-calendar-alt"></i>
+                            When were you born?
+                        </label>
+                        <input type="date" id="birthDate" required>
+                    </div>
+                    <button type="submit" class="btn-primary">
+                        <i class="fas fa-gift"></i>
+                        Celebrate My Birthday!
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Birthday Card Display -->
+        <div id="birthdayCard" class="card birthday-card hidden">
+            <div class="card-header celebration-header">
+                <h1>🎉 Happy Birthday Prem! 🎂</h1>
+                <div class="age-display">
+                    <div class="age-main">
+                        <span id="ageYears">0</span>
+                        <span class="age-label">Years Old</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <!-- Age Statistics -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalDays">0</div>
+                        <div class="stat-label">Days Lived</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalHours">0</div>
+                        <div class="stat-label">Hours Lived</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalMinutes">0</div>
+                        <div class="stat-label">Minutes Lived</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="totalSeconds">0</div>
+                        <div class="stat-label">Seconds Lived</div>
+                    </div>
+                </div>
+
+                <!-- Birthday Wishes -->
+                <div class="birthday-wishes">
+                    <div class="wishes-header">
+                        <h3>💝 Special Birthday Wishes for Prem</h3>
+                    </div>
+                    <div class="wishes-content">
+                        <p class="main-wish">
+                            "Dear Prem, on this special day, I want you to know how grateful I am to have you as a friend. 
+                            Your smile lights up every room, your laughter makes every moment brighter, and your friendship 
+                            means the world to me. May this new year of your life bring you endless joy, amazing adventures, 
+                            and all the happiness your heart can hold. You deserve nothing but the best! 🎂✨"
+                        </p>
+                        <div class="surprise-section">
+                            <h3>🎁 A Little Surprise from Ashok 🎁</h3>
+                            <p>Dear Prem, thank you for all the wonderful memories we've shared together. Your friendship means the world to me, and I'm grateful for all the laughter and joy you bring into my life!</p>
+                            <div class="gift-box">🎁</div>
+                            <p class="made-with-love">Made with ❤️ just for you!</p>
+                        </div>
+
+                        <!-- Birthday Cake with Candles -->
+                        <div class="cake-section">
+                            <div class="birthday-cake" id="birthdayCake">
+                                <div class="cake-base">🎂</div>
+                                <div class="candles-container">
+                                    <div class="candle">🕯️</div>
+                                    <div class="candle">🕯️</div>
+                                    <div class="candle">🕯️</div>
+                                    <div class="candle">🕯️</div>
+                                    <div class="candle">🕯️</div>
+                                </div>
+                                <div class="cake-message" id="cakeMessage">🎂 Click the cake! 🎂</div>
+                            </div>
+                        </div>
+
+                        <!-- Beautiful Animation Section -->
+                        <div class="animation-section">
+                            <div class="floating-hearts">
+                                <div class="heart">💖</div>
+                                <div class="heart">💝</div>
+                                <div class="heart">💕</div>
+                                <div class="heart">💗</div>
+                                <div class="heart">💖</div>
+                                <div class="heart">💝</div>
+                            </div>
+                            <div class="sparkles">
+                                <div class="sparkle">✨</div>
+                                <div class="sparkle">⭐</div>
+                                <div class="sparkle">🌟</div>
+                                <div class="sparkle">✨</div>
+                                <div class="sparkle">⭐</div>
+                                <div class="sparkle">🌟</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Media Slideshow -->
+                <div class="slideshow-container">
+                    <div class="slideshow-header">
+                        <h3>🖼️ Your Beautiful Memories</h3>
+                    </div>
+                    <div class="slideshow">
+                        <div id="mediaContainer" class="media-container">
+                            <!-- Media will be loaded here -->
+                        </div>
+                        <div class="slideshow-controls">
+                            <button id="prevBtn" class="control-btn">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <div class="slide-indicators" id="indicators">
+                                <!-- Indicators will be generated here -->
+                            </div>
+                            <button id="nextBtn" class="control-btn">
+                                <i class="fas fa-chevron-right"></i>
+                            </button>
+                        </div>
+                        <div id="mediaCaption" class="media-caption">
+                            Beautiful memories to cherish forever
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Balloon Animation Container -->
+    <div id="balloonContainer" class="balloon-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

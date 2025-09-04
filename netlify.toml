@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = "echo 'No build step required for static site'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
