@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/media/(.*)",
+      "dest": "/media/$1"
+    },
+    {
+      "src": "/(.*\\.(css|js|jpg|jpeg|png|gif|mp4|webm|svg|ico))",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
